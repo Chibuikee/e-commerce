@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 export default function Cardmethod() {
   const [cardInfo, setcardInfo] = useState({
-    CardHoldersName: "Chibuike",
+    CardHoldersName: "ewenike Chibuike",
     cardSecuritycode: "098",
-    CardNumber: 729,
-    cardExpDate: ["02 / ", 2024],
+    CardNumber: "Input your card number",
+    cardExpDate: ["02 / " + 2024],
   });
   function handleChange(event) {
     setcardInfo((prevInfo) => {
@@ -14,12 +14,16 @@ export default function Cardmethod() {
       return { prevInfo, [name]: value };
     });
   }
+
   return (
     <div className="Cardmethod">
       <div className="Cardmethod-container">
-        <div className="Cardmethod-path">
-          <a>
-            <img src="" alt="go back icon" />
+        <div style={{ display: "flex" }} className="Cardmethod-path">
+          <a href="#">
+            <img
+              src="./IconsAndImg/mastercardicon/Shape.png"
+              alt="go back icon"
+            />
           </a>
           <h3>Credit / Debit card</h3>
         </div>
@@ -32,7 +36,23 @@ export default function Cardmethod() {
           }}
           className="Cardmethod-card"
         >
-          <img src="" alt="mastercard logo" />
+          <div>
+            <img
+              src="./IconsAndImg/mastercardicon/mastercardlogo-grey.png"
+              style={{ blend: "Passthrough", width: "36px", height: "22px" }}
+              alt="mastercard logo"
+            />
+            <img
+              src="./IconsAndImg/mastercardicon/mastercard-logo.png"
+              style={{ width: "64.71px", heigth: "40px" }}
+              alt="mastercard logo"
+            />
+            <img
+              src="./IconsAndImg/mastercardicon/Tm-icon.svg"
+              style={{ width: "64.71px", heigth: "40px" }}
+              alt="Tm logo"
+            />
+          </div>
           <h2>{cardInfo.CardNumber}</h2>
           <div>
             <ul id="cardholder">
@@ -53,24 +73,28 @@ export default function Cardmethod() {
               name="CardNumber"
               placeholder="Input your card number"
               onChange={handleChange}
+              value={cardInfo.CardNumber}
             ></input>
             <input
               type="text"
               name="cardExpDate"
               placeholder="card exp date"
               onChange={handleChange}
+              value={cardInfo.cardExpDate}
             ></input>
             <input
               type="text"
               name="cardSecuritycode"
               placeholder="card security code"
               onChange={handleChange}
+              value={cardInfo.cardSecuritycode}
             ></input>
             <input
               type="text"
               name="CardHoldersName"
               placeholder="Card holder's name"
               onChange={handleChange}
+              value={cardInfo.CardHoldersName}
             ></input>
           </form>
         </div>

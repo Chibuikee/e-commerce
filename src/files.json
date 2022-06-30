@@ -1,0 +1,209 @@
+[
+    {
+        "id": "homepagemenu",
+        "img": [
+            {
+                "path": "/IconsAndImg/shop/LOGO 1.png",
+                "name": "LOGO"
+            },
+            {
+                "path": "/IconsAndImg/shop/notification.png",
+                "name": "notification"
+            },
+            {
+                "path": "/IconsAndImg/shop/Cart icon.png",
+                "name": "Cart"
+            },
+            {
+                "path": "/IconsAndImg/shop/heart.svg",
+                "name": "heart"
+            },
+            {
+                "path": "/IconsAndImg/shop/Search Icon.png",
+                "name": "Search"
+            },
+            {
+                "path": "/IconsAndImg/shop/Menu.png",
+                "name": "Menu"
+            }
+        ]
+    },
+    {
+        "id": "filterAndDisplay",
+        "img": [
+            {
+                "path": "/IconsAndImg/shopping/options@3x.png",
+                "name": "filter"
+            },
+            {
+                "path": "/IconsAndImg/shopping/Full View.png",
+                "name": "fullview"
+            },
+            {
+                "path": "/IconsAndImg/shopping/Grid View.png",
+                "name": "gridview"
+            }
+        ]
+    },
+    {
+        "id": "clothesinfo",
+        "imgInfo": [
+            {
+                "name": "Aphrodite",
+                "path": "/IconsAndImg/clothes/Aphrodite 1.png",
+                "isFavourite": false,
+                "price": "Rp200.000",
+                "rating": "5",
+                "sizes": [
+                    {
+                        "id": "S"
+                    },
+                    {
+                        "id": "M"
+                    },
+                    {
+                        "id": "L"
+                    },
+                    {
+                        "id": "XXL"
+                    },
+                    {
+                        "id": "XXL"
+                    }
+                ],
+                "quantity": 0,
+                "description": "God of Thunder and the Almighty Ruler of Skies who went mad; psychotic. He raped then ate his beloved childrens, and even some of his loyal servants who was predicted to betray and deceive him oneday. A distorted god."
+            },
+            {
+                "name": "Ares",
+                "path": "/IconsAndImg/clothes/Ares 1.png",
+                "isFavourite": false,
+                "price": "Rp100.000",
+                "rating": "5",
+                "sizes": [
+                    {
+                        "id": "S"
+                    },
+                    {
+                        "id": "M"
+                    },
+                    {
+                        "id": "L"
+                    },
+                    {
+                        "id": "XXL"
+                    },
+                    {
+                        "id": "XXL"
+                    }
+                ],
+                "quantity": 0,
+                "description": "God of Thunder and the Almighty Ruler of Skies who went mad; psychotic. He raped then ate his beloved childrens, and even some of his loyal servants who was predicted to betray and deceive him oneday. A distorted god."
+            },
+            {
+                "name": "Promise",
+                "path": "/IconsAndImg/clothes/Promise 1.png",
+                "isFavourite": false,
+                "price": "Rp150.000",
+                "rating": "5",
+                "sizes": [
+                    {
+                        "id": "S"
+                    },
+                    {
+                        "id": "M"
+                    },
+                    {
+                        "id": "L"
+                    },
+                    {
+                        "id": "XXL"
+                    },
+                    {
+                        "id": "XXL"
+                    }
+                ],
+                "quantity": 0,
+                "description": "God of Thunder and the Almighty Ruler of Skies who went mad; psychotic. He raped then ate his beloved childrens, and even some of his loyal servants who was predicted to betray and deceive him oneday. A distorted god."
+            },
+            {
+                "name": "Sisters",
+                "path": "/IconsAndImg/clothes/Sisters 1.png",
+                "isFavourite": true,
+                "price": "Rp200.000",
+                "rating": "5",
+                "sizes": [
+                    {
+                        "id": "S"
+                    },
+                    {
+                        "id": "M"
+                    },
+                    {
+                        "id": "L"
+                    },
+                    {
+                        "id": "XXL"
+                    },
+                    {
+                        "id": "XXL"
+                    }
+                ],
+                "quantity": 0,
+                "description": "God of Thunder and the Almighty Ruler of Skies who went mad; psychotic. He raped then ate his beloved childrens, and even some of his loyal servants who was predicted to betray and deceive him oneday. A distorted god."
+            },
+            {
+                "name": "Throat",
+                "path": "/IconsAndImg/clothes/Throat 1.png",
+                "isFavourite": false,
+                "price": "Rp310.000",
+                "rating": "5",
+                "sizes": [
+                    {
+                        "id": "S"
+                    },
+                    {
+                        "id": "M"
+                    },
+                    {
+                        "id": "L"
+                    },
+                    {
+                        "id": "XXL"
+                    },
+                    {
+                        "id": "XXL"
+                    }
+                ],
+                "quantity": 0,
+                "description": "God of Thunder and the Almighty Ruler of Skies who went mad; psychotic. He raped then ate his beloved childrens, and even some of his loyal servants who was predicted to betray and deceive him oneday. A distorted god."
+            },
+            {
+                "name": "Zeus",
+                "path": "/IconsAndImg/clothes/Zeus 2.png",
+                "isFavourite": true,
+                "price": "Rp300.000",
+                "rating": "5",
+                "sizes": [
+                    {
+                        "id": "S"
+                    },
+                    {
+                        "id": "M"
+                    },
+                    {
+                        "id": "L"
+                    },
+                    {
+                        "id": "XXL"
+                    },
+                    {
+                        "id": "XXL"
+                    }
+                ],
+                "quantity": 0,
+                "description": "God of Thunder and the Almighty Ruler of Skies who went mad; psychotic. He raped then ate his beloved childrens, and even some of his loyal servants who was predicted to betray and deceive him oneday. A distorted god."
+            }
+        ]
+    }
+]
