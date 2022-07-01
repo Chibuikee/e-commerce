@@ -11,11 +11,11 @@ export default function FilterSection() {
   ); /*forEach could be used instead but for code clarity flter and find is used */
   const filtericon = imgArr.find((item) => item.name == "filter");
   const viewicons = filteredimgArr.map((item) => (
-    <div>
+    <div key={item.name}>
       <img src={item.path} alt={item.name} />
     </div>
   ));
-  console.log(imgArr);
+
   return (
     <section>
       <div className="filteroptions">

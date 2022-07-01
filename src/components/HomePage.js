@@ -4,7 +4,6 @@ export default function Homepage() {
   const { Clothesinfo, setClothesinfo, selected, setSelected } =
     useContext(ClotheContext);
 
-  console.log(selected);
   function toggleIsFavourite(item) {
     setClothesinfo((prev) =>
       prev.map((clothe) =>
@@ -15,7 +14,7 @@ export default function Homepage() {
     );
   }
   const clothelist = Clothesinfo.map((item) => (
-    <div className="">
+    <div key={item.name} className="">
       <img onClick={() => setSelected(item)} src={item.path} alt="clothe" />
       <div>
         <ul>
