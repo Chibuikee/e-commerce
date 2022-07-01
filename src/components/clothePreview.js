@@ -12,7 +12,7 @@ export default function Clothepreview() {
   const quantity = insidecart
     ? insidecart
     : { qty: 0 }; /*check for the item inside the cart first */
-  console.log(quantity, selected.name);
+
   return (
     <section>
       {/* <div className="clotheimgs">{clotheimgPreview}</div> */}

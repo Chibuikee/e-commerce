@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { ClotheContext } from "../ClotheContext";
-export default function Homepage() {
-  const { Clothesinfo, setClothesinfo, selected, setSelected } =
-    useContext(ClotheContext);
 
+export default function Homepage() {
+  const { Clothesinfo, setClothesinfo, setSelected } =
+    useContext(ClotheContext);
   function toggleIsFavourite(item) {
     setClothesinfo((prev) =>
       prev.map((clothe) =>
@@ -39,28 +39,6 @@ export default function Homepage() {
 
   return (
     <section className="Homepage">
-      <div className="">
-        <a href="#">
-          <img src={Clothesinfo.Aphrodite} alt="logo" />
-        </a>
-        <div>
-          <img src="" alt="notification icon" />
-          <img src="" alt="basket icon" />
-          <img src="" alt="favourite icon" />
-          <img src="" alt="search icon" />
-          <img src="" alt="hamburger icon" />
-        </div>
-      </div>
-
-      <div className="">
-        <div>
-          <img src="" alt="filter icon" />
-        </div>
-        <div>
-          <img src="" alt="grid view icon" />
-          <img src="" alt="full view icon" />
-        </div>
-      </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
         {clothelist}
       </div>

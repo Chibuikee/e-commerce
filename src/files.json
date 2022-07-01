@@ -52,7 +52,7 @@
                 "name": "Aphrodite",
                 "path": "/IconsAndImg/clothes/Aphrodite 1.png",
                 "isFavourite": false,
-                "price": "Rp200.000",
+                "price": "200.000",
                 "rating": "5",
                 "sizes": [
                     {
@@ -78,7 +78,7 @@
                 "name": "Ares",
                 "path": "/IconsAndImg/clothes/Ares 1.png",
                 "isFavourite": false,
-                "price": "Rp100.000",
+                "price": "100.000",
                 "rating": "5",
                 "sizes": [
                     {
@@ -104,7 +104,7 @@
                 "name": "Promise",
                 "path": "/IconsAndImg/clothes/Promise 1.png",
                 "isFavourite": false,
-                "price": "Rp150.000",
+                "price": "150.000",
                 "rating": "5",
                 "sizes": [
                     {
@@ -130,7 +130,7 @@
                 "name": "Sisters",
                 "path": "/IconsAndImg/clothes/Sisters 1.png",
                 "isFavourite": true,
-                "price": "Rp200.000",
+                "price": "200.000",
                 "rating": "5",
                 "sizes": [
                     {
@@ -156,7 +156,7 @@
                 "name": "Throat",
                 "path": "/IconsAndImg/clothes/Throat 1.png",
                 "isFavourite": false,
-                "price": "Rp310.000",
+                "price": "310.000",
                 "rating": "5",
                 "sizes": [
                     {
@@ -182,7 +182,7 @@
                 "name": "Zeus",
                 "path": "/IconsAndImg/clothes/Zeus 2.png",
                 "isFavourite": true,
-                "price": "Rp300.000",
+                "price": "300.000",
                 "rating": "5",
                 "sizes": [
                     {

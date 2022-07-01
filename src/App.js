@@ -58,8 +58,7 @@ function App() {
   return (
     <div className="App">
       <Cardmethod />
-      <Navbar />
-      <FilterSection />
+
       <ClotheContext.Provider
         value={{
           Clothesinfo,
@@ -73,6 +72,8 @@ function App() {
           removeItem,
         }}
       >
+        <Navbar />
+        <FilterSection />
         <Homepage />
         {selected && <Clothepreview />}
         <Cart />
