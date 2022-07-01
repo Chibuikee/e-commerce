@@ -9,11 +9,11 @@ export default function Navbar() {
   ); /*forEach could be used instead but for code clarity flter and find is used */
   const logo = imgArr.find((item) => item.name === "LOGO");
   const menuicons = filteredimgArr.map((item) => (
-    <div>
+    <div key={item.name}>
       <img src={item.path} alt={item.name} />
     </div>
   ));
-  console.log(imgArr);
+
   return (
     <section>
       <div className="logoAndmenuIcons-container">

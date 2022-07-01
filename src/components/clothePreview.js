@@ -1,13 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ClotheContext } from "../ClotheContext";
 
 export default function Clothepreview() {
-  const [quantity, setQuantity] = useState(1);
-  const { selected } = useContext(ClotheContext);
+  const { selected, handleCart, cartitems, handleRemove } =
+    useContext(ClotheContext);
 
   const size = selected.sizes.map((sizesample) => (
-    <button>{sizesample.id}</button>
+    <button key={sizesample.id}>{sizesample.id}</button>
   ));
+  const insidecart = cartitems.find((item) => item.name == selected.name);
+  const quantity = insidecart
+    ? insidecart
+    : { qty: 0 }; /*check for the item inside the cart first */
+  console.log(quantity, selected.name);
   return (
     <section>
       {/* <div className="clotheimgs">{clotheimgPreview}</div> */}
@@ -21,9 +26,9 @@ export default function Clothepreview() {
       </div>
       <div>
         <div>
-          <i onClick={() => setQuantity(quantity + 1)}>Add</i>
-          <h2>{quantity}</h2>
-          <i onClick={() => setQuantity(quantity - 1)}>remove</i>
+          <i onClick={() => handleCart(selected)}>Add</i>
+          <h2>{quantity.qty}</h2>
+          <i onClick={() => handleRemove(selected)}>remove</i>
         </div>
         <i></i>
       </div>
@@ -36,7 +41,15 @@ export default function Clothepreview() {
         <h2>Size</h2>
         {size}
       </div>
-      <button>add to cart</button>
+      <button onClick={() => handleCart(selected)}>add to cart</button>
     </section>
   );
 }
+// useEffect(() => {
+//     setCartitems(
+//       cartitems.map((item) =>
+//         item.name === selected.name ? { ...item, qty: item.qty } : item
+//       )
+//     );
+//   }, [quantity, cartitems]);
+// cartitems.length === 0 ? 0 : qty.qty
