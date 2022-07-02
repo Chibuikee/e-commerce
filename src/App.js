@@ -8,6 +8,8 @@ import Homepage from "./components/HomePage";
 import Navbar from "./components/navbar";
 import Clothepreview from "./components/clothePreview";
 import Cart from "./components/cart";
+import Registration from "./components/Registration";
+import Signin from "./components/Signin";
 
 function App() {
   const [Clothesinfo, setClothesinfo] = useState(
@@ -57,6 +59,8 @@ function App() {
   }
   return (
     <div className="App">
+      <Registration />
+      <Signin />
       <Cardmethod />
 
       <ClotheContext.Provider
