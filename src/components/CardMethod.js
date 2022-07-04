@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Cardmethod() {
   const [cardInfo, setcardInfo] = useState({
@@ -19,12 +20,9 @@ export default function Cardmethod() {
     <div className="Cardmethod">
       <div className="Cardmethod-container">
         <div style={{ display: "flex" }} className="Cardmethod-path">
-          <a href="#">
-            <img
-              src="./IconsAndImg/mastercardicon/Shape.png"
-              alt="go back icon"
-            />
-          </a>
+          <Link to="/Cart">
+            <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+          </Link>
           <h3>Credit / Debit card</h3>
         </div>
         <div

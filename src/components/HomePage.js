@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { ClotheContext } from "../ClotheContext";
-
+import Navbar from "./navbar";
+import FilterSection from "./filtersection";
+import { Link } from "react-router-dom";
 export default function Homepage() {
   const { Clothesinfo, setClothesinfo, setSelected } =
     useContext(ClotheContext);
@@ -13,9 +15,12 @@ export default function Homepage() {
       )
     );
   }
+  console.log(ClotheContext);
   const clothelist = Clothesinfo.map((item) => (
     <div key={item.name} className="">
-      <img onClick={() => setSelected(item)} src={item.path} alt="clothe" />
+      <Link to={`/HomePage/${item.name}`}>
+        <img onClick={() => setSelected(item)} src={item.path} alt="clothe" />
+      </Link>
       <div>
         <ul>
           <li>{item.name}</li>
@@ -39,6 +44,8 @@ export default function Homepage() {
 
   return (
     <section className="Homepage">
+      <Navbar />
+      <FilterSection />
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
         {clothelist}
       </div>

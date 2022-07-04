@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { ClotheContext } from "../ClotheContext";
 import jsonfiles from "../files.json";
 export default function Navbar() {
@@ -35,10 +36,10 @@ export default function Navbar() {
           <img src={notification.path} alt={notification.name} />
           <span className="badge">3</span>
         </a>
-        <a href="#" className="notification">
+        <Link to="/Cart" className="notification">
           <img src={Cart.path} alt={Cart.name} />
           <span className="badge">{cartitems.length}</span>
-        </a>
+        </Link>
         <a href="#" className="notification">
           <img src={heart.path} alt={heart.name} />
           <span className="badge">{favouriteNo.length}</span>

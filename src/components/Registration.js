@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 export default function Registration() {
   const {
     register,
@@ -16,13 +17,14 @@ export default function Registration() {
       <pre> {JSON.stringify(userInfo, undefined, 2)} </pre>/*remove this to stop
       displaying form input object */
       <div>
+        <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
         <div>
           <h1>Get's started with Bajuku</h1>
           <p>
             Already have an account?
-            <a href="#">
+            <Link to="/Signin">
               <span>Log in</span>
-            </a>
+            </Link>
           </p>
         </div>
         <h1>Registration </h1>
@@ -68,7 +70,9 @@ export default function Registration() {
           ></input>
         </div>
         <p style={{ color: "red" }}>{errors.Password?.message}</p>
+
         <button>REGISTER</button>
+
         <div>
           <label>By joining I agree to receive emails from Bajuku.</label>
           <input

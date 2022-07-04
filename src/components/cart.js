@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { ClotheContext } from "../ClotheContext";
 import jsonfiles from "../files.json";
 
@@ -14,7 +15,10 @@ export default function Cart() {
   return (
     <section>
       <div>
-        <img src="" alt="goback" />
+        <Link to="/HomePage">
+          <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+        </Link>
+
         <div>
           <h2>Cart</h2>
           <img src={logo.path} alt="Logo" />
@@ -39,9 +43,11 @@ export default function Cart() {
       </div>
       {cartitems.length !== 0 && (
         <div>
-          <button>
-            Go to checkout<span>{productPrice}</span>
-          </button>
+          <Link to="/Cart/CardMethod">
+            <button>
+              Go to checkout<span>{productPrice}</span>
+            </button>
+          </Link>
         </div>
       )}
     </section>

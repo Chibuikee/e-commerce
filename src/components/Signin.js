@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function App() {
   const initialValues = { email: "", password: "" };
@@ -49,6 +50,7 @@ function App() {
       ) : (
         <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       )}
+      <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
       <h1>Welcome Back</h1>
       <p>
         Yay! You're back! Thanks for shopping with us. We have excited deals and
@@ -80,11 +82,13 @@ function App() {
             />
           </div>
           <p>{formErrors.password}</p>
-          <button className="sign-button ">Signin</button>
+          <Link to="/HomePage">
+            <button className="sign-button ">Signin</button>
+          </Link>
         </div>
       </form>
       <p>
-        Not registered yet?<a>Create Account</a>
+        Not registered yet?<Link to="/">Create Account</Link>
       </p>
     </div>
   );

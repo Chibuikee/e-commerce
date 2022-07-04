@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ClotheContext } from "../ClotheContext";
 
 export default function Clothepreview() {
@@ -12,10 +13,13 @@ export default function Clothepreview() {
   const quantity = insidecart
     ? insidecart
     : { qty: 0 }; /*check for the item inside the cart first */
-
+  console.log(ClotheContext);
   return (
     <section>
       {/* <div className="clotheimgs">{clotheimgPreview}</div> */}
+      <Link to="/HomePage">
+        <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+      </Link>
       <div>
         <h2>The Almighty</h2>
         <div>
