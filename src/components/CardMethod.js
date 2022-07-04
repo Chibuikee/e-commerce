@@ -36,17 +36,17 @@ export default function Cardmethod() {
         >
           <div>
             <img
-              src="./IconsAndImg/mastercardicon/mastercardlogo-grey.png"
+              src="/IconsAndImg/mastercardicon/mastercardlogo-grey.png"
               style={{ blend: "Passthrough", width: "36px", height: "22px" }}
               alt="mastercard logo"
             />
             <img
-              src="./IconsAndImg/mastercardicon/mastercard-logo.png"
+              src="/IconsAndImg/mastercardicon/mastercard-logo.png"
               style={{ width: "64.71px", heigth: "40px" }}
               alt="mastercard logo"
             />
             <img
-              src="./IconsAndImg/mastercardicon/Tm-icon.svg"
+              src="/IconsAndImg/mastercardicon/Tm-icon.svg"
               style={{ width: "64.71px", heigth: "40px" }}
               alt="Tm logo"
             />

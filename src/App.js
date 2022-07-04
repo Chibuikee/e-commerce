@@ -11,6 +11,8 @@ import Cart from "./components/cart";
 import Registration from "./components/Registration";
 import Signin from "./components/Signin";
 import { Route, Routes } from "react-router-dom";
+import Favourites from "./components/Favourite";
+import Notifications from "./components/Notifications";
 function App() {
   const [Clothesinfo, setClothesinfo] = useState(
     []
@@ -102,6 +104,8 @@ function App() {
         <Routes>
           <Route path="/HomePage" element={<Homepage />} />
           <Route path="/HomePage/:id" element={<Clothepreview />} />
+          <Route path="/HomePage/Favourites" element={<Favourites />} />
+          <Route path="/HomePage/Notifications" element={<Notifications />} />
           <Route path="/" element={<Registration />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Cart/CardMethod" element={<Cardmethod />} />

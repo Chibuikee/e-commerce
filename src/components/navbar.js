@@ -32,18 +32,18 @@ export default function Navbar() {
           <img src={logo.path} alt={logo.name} />
         </div>
 
-        <a href="#" className="notification">
+        <Link to="/HomePage/Notifications" className="notification">
           <img src={notification.path} alt={notification.name} />
           <span className="badge">3</span>
-        </a>
+        </Link>
         <Link to="/Cart" className="notification">
           <img src={Cart.path} alt={Cart.name} />
           <span className="badge">{cartitems.length}</span>
         </Link>
-        <a href="#" className="notification">
+        <Link to="/HomePage/Favourites" className="notification">
           <img src={heart.path} alt={heart.name} />
           <span className="badge">{favouriteNo.length}</span>
-        </a>
+        </Link>
 
         {menuicons}
       </div>
