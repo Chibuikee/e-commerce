@@ -21,10 +21,12 @@ export default function Navbar() {
   const favouriteNo = Clothesinfo.filter((item) => item.isFavourite === true);
   const menuicons = filteredimgArr.map((item) => (
     <div key={item.name}>
-      <img src={item.path} alt={item.name} />
+      <Link to="/HomePage/Search">
+        <img src={item.path} alt={item.name} />
+      </Link>
     </div>
   ));
-
+  // "/HomePage/Search"
   return (
     <section>
       <div className="logoAndmenuIcons-container">

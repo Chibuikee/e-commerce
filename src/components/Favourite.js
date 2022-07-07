@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ClotheContext } from "../ClotheContext";
 
 function Favourites() {
-  const { favouritearr, addAll } = useContext(ClotheContext);
+  const { favouritearr, handleCart, addAll } = useContext(ClotheContext);
 
   return (
     <section>
@@ -20,9 +20,14 @@ function Favourites() {
             <span>{item.name}</span>
           </Link>
           <h3>Rp{item.price}</h3>
-          <img src="/IconsAndImg/shop/Arrow.png" alt="add to basket icon" />
+          <img
+            onClick={() => handleCart(item)}
+            src="/IconsAndImg/shop/Arrow.png"
+            alt="add to basket icon"
+          />
         </div>
       ))}
+
       {favouritearr.length !== 0 ? (
         <button onClick={() => addAll(favouritearr)}>
           Add all to cart<span>Rp1203</span>

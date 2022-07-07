@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function App() {
@@ -18,12 +18,6 @@ function App() {
     setIsSubmit(true);
   };
 
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  }, [formErrors]);
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -57,8 +51,8 @@ function App() {
       <h1>Welcome Back</h1>
       <p>
         Yay! You're back! Thanks for shopping with us. We have excited deals and
-        promotions going on, grab your pick now!{" "}
-      </p>{" "}
+        promotions going on, grab your pick now!
+      </p>
       <Link to="/HomePage">
         <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
       </Link>
