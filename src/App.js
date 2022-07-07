@@ -13,6 +13,7 @@ import Signin from "./components/Signin";
 import { Route, Routes } from "react-router-dom";
 import Favourites from "./components/Favourite";
 import Notifications from "./components/Notifications";
+import WelcomePage from "./components/WelcomePage";
 function App() {
   const [Clothesinfo, setClothesinfo] = useState(
     []
@@ -63,6 +64,8 @@ function App() {
       setCartitems([...cartitems, { ...product, qty: 1 }]);
     }
   }
+  const favouritearr = Clothesinfo.filter((item) => item?.isFavourite === true);
+
   function handleRemove(product) {
     const insideCart = cartitems.find((item) => item.name === product.name);
     if (insideCart.qty === 1) {
@@ -77,6 +80,12 @@ function App() {
       );
     }
   }
+  function addAll(prop) {
+    console.log(prop);
+    prop.forEach((item) => {
+      handleCart(item);
+    });
+  }
   function removeItem(product) {
     const inside = cartitems.find((item) => item.name === product.name);
     switch (inside.name) {
@@ -90,6 +99,8 @@ function App() {
     <div className="App">
       <ClotheContext.Provider
         value={{
+          addAll,
+          favouritearr,
           Clothesinfo,
           setClothesinfo,
           selected,
@@ -102,11 +113,12 @@ function App() {
         }}
       >
         <Routes>
+          <Route path="/" element={<WelcomePage />} />
           <Route path="/HomePage" element={<Homepage />} />
           <Route path="/HomePage/:id" element={<Clothepreview />} />
           <Route path="/HomePage/Favourites" element={<Favourites />} />
           <Route path="/HomePage/Notifications" element={<Notifications />} />
-          <Route path="/" element={<Registration />} />
+          <Route path="/Registration" element={<Registration />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Cart/CardMethod" element={<Cardmethod />} />
           <Route path="/Cart" element={<Cart />} />

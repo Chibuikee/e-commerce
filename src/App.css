@@ -28,3 +28,12 @@ body {
   background-color: red;
   color: white;
 }
+.logoAndmenuIcons-container {
+  display: flex;
+  justify-content: space-between;
+}
+.menuicons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}

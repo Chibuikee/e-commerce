@@ -15,7 +15,7 @@ export default function Homepage() {
       )
     );
   }
-  console.log(ClotheContext);
+
   const clothelist = Clothesinfo.map((item) => (
     <div key={item.name} className="">
       <Link to={`/HomePage/${item.name}`}>

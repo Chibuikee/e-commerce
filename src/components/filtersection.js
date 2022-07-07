@@ -6,9 +6,7 @@ export default function FilterSection() {
     (item) => item.id === "filterAndDisplay"
   );
   const imgArr = filterAndDisplayobj.img;
-  const filteredimgArr = imgArr.filter(
-    (item) => item.name !== "filter"
-  ); /*forEach could be used instead but for code clarity flter and find is used */
+  const filteredimgArr = imgArr.filter((item) => item.name !== "filter");
   const filtericon = imgArr.find((item) => item.name == "filter");
   const viewicons = filteredimgArr.map((item) => (
     <div key={item.name}>
@@ -25,7 +23,9 @@ export default function FilterSection() {
           <li>Women</li>
           <li>Sale</li>
         </ul>
+        <hr></hr>
       </div>
+
       <div className="logoAndmenuIcons-container">
         <div>
           <h3>FILTER & SORT</h3>
