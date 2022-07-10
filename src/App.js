@@ -16,6 +16,8 @@ import Sidebar from "./components/sidebar";
 import PaymentSuccessful from "./components/paymentSuccessful";
 import PaymentDeclined from "./components/paymentDeclined";
 import Search from "./components/Search";
+import CheckoutPopup from "./components/checkoutpopup";
+import Filteredbar from "./components/filteredBar";
 function App() {
   const [Clothesinfo, setClothesinfo] = useState(
     []
@@ -145,9 +147,12 @@ function App() {
           <Route path="/" element={<WelcomePage />} />
           <Route path="/HomePage" element={<Homepage />}>
             <Route path="Sidebar" element={<Sidebar />} />
+            <Route path=":barId" element={<Filteredbar />} />
           </Route>
           <Route path="/HomePage/:id" element={<Clothepreview />} />
-          <Route path="/HomePage/Favourites" element={<Favourites />} />
+          <Route path="/HomePage/Favourites" element={<Favourites />}>
+            <Route path="CheckoutPopup" element={<CheckoutPopup />} />
+          </Route>
           <Route path="/HomePage/Notifications" element={<Notifications />} />
           <Route path="/HomePage/Search" element={<Search />} />
           <Route path="/Registration" element={<Registration />} />

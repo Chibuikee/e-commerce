@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { ClotheContext } from "../ClotheContext";
 
 function Favourites() {
@@ -29,12 +29,15 @@ function Favourites() {
       ))}
 
       {favouritearr.length !== 0 ? (
-        <button onClick={() => addAll(favouritearr)}>
-          Add all to cart<span>Rp1203</span>
-        </button>
+        <Link to="CheckoutPopup">
+          <button onClick={() => addAll(favouritearr)}>
+            Add all to cart<span>Rp1203</span>
+          </button>
+        </Link>
       ) : (
         <h1>YOU ARE YET TO LIKE ANY ITEM</h1>
       )}
+      <Outlet />
     </section>
   );
 }

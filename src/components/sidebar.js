@@ -11,7 +11,7 @@ function Sidebar() {
         <div>
           <img src="/IconsAndImg/sidebar/dpframe.png" alt="dpframe" />
           <div>
-            <h3>Full Name</h3>
+            <h3 contentEditable="true">Full Name</h3>
             <span>sopewenike@gmail.com</span>
           </div>
           <img src="/IconsAndImg/sidebar/edit.png" alt="edit" />
