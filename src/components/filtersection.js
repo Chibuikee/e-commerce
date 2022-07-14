@@ -18,20 +18,23 @@ export default function FilterSection() {
 
   return (
     <section>
-      <div className="filteroptions">
-        <ul>
+      <div className="filter-options">
+        <ul className="filter-list">
           <li>Popular</li>
           <li>Men</li>
           <li>Women</li>
           <li>Sale</li>
         </ul>
       </div>
-      <div className="logoAndmenuIcons-container">
-        <div>
-          <h3>FILTER & SORT</h3>
-          <img src={filtericon.path} alt={filtericon.name} />
+      <hr className="line"></hr>
+      <div className="filtermenuIcons-container">
+        <div className="filter-sort">
+          <h4 className="filter-text">FILTER & SORT</h4>
+          <img className="filter-icon" src={filtericon.path} alt={filtericon.name} />
         </div>
+        <div className="view-icons">
         {viewicons}
+        </div>
       </div>
     </section>
   );

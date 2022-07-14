@@ -32,21 +32,23 @@ export default function Registration() {
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="field">
-          <label>Username</label>
-          <input
+          <label className="name">NAME</label>
+          <br/>
+          <input className="username"
             type="text"
             name="Username"
-            placeholder="Username"
-            {...register("Username", { required: "Username is required" })}
+            placeholder="name@email.com"
+            {...register("Username", {required: "Username is required" })}
           ></input>
         </div>
-        <p style={{ color: "red" }}>{errors.Username?.message}</p>
+        <p className="errors" style={{ color: "red" }}>{errors.Username?.message}</p>
         <div className="field">
-          <label>Email</label>
-          <input
+          <label className="email-label">EMAIL</label>
+          <br/>
+          <input className="email"
             type="email"
             name="Email"
-            placeholder="Valid Email"
+            placeholder="name@email.com"
             {...register("Email", {
               required: "Email is required",
               pattern: {
@@ -57,10 +59,11 @@ export default function Registration() {
             })}
           ></input>
         </div>
-        <p style={{ color: "red" }}>{errors.Email?.message}</p>
+        <p className="errors" style={{ color: "red" }}>{errors.Email?.message}</p>
         <div className="field">
-          <label>Password</label>
-          <input
+          <label className="password-label">PASSWORD</label>
+          <br/>
+          <input className="password"
             type="password"
             name="Password"
             placeholder="Password"
@@ -69,13 +72,13 @@ export default function Registration() {
             })}
           ></input>
         </div>
-        <p style={{ color: "red" }}>{errors.Password?.message}</p>
+        <p className="errors-password">{errors.Password?.message}</p>
 
-        <button>REGISTER</button>
+        <button className="register-btn">REGISTER</button>
 
         <div>
-          <label>By joining I agree to receive emails from Bajuku.</label>
-          <input
+          <label className="agreement-label">By joining I agree to receive emails from Bajuku.</label>
+          <input className="checkbox"
             type="checkbox"
             name="checker"
             {...register("checker")}

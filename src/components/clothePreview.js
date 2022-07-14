@@ -45,7 +45,7 @@ export default function Clothepreview() {
         <h2>Size</h2>
         {size}
       </div>
-      <button onClick={() => handleCart(selected)}>add to cart</button>
+      <button className="addcart-btn" onClick={() => handleCart(selected)}>ADD TO CART</button>
     </section>
   );
 }

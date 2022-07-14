@@ -28,12 +28,13 @@ export default function Navbar() {
   return (
     <section>
       <div className="logoAndmenuIcons-container">
-        <div>
+        <div className="logo">
           <img src={logo.path} alt={logo.name} />
         </div>
 
+        <div className="menuicons-container">
         <Link to="/HomePage/Notifications" className="notification">
-          <img src={notification.path} alt={notification.name} />
+          <img className="notifications" src={notification.path} alt={notification.name} />
           <span className="badge">3</span>
         </Link>
         <Link to="/Cart" className="notification">
@@ -45,7 +46,8 @@ export default function Navbar() {
           <span className="badge">{favouriteNo.length}</span>
         </Link>
 
-        {menuicons}
+        <span className="menuicons">{menuicons}</span>
+        </div>
       </div>
     </section>
   );
