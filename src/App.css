@@ -1,10 +1,10 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
 }
 body {
   box-sizing: border-box;
-} */
+}
 .notification {
   background-color: #555;
   color: white;
@@ -82,4 +82,231 @@ body {
   transform-origin: left top;
   transform: scale(1, 1);
   bottom: -10px;
+}
+
+/* WELCOME SECTION */
+.welcome-section {
+  position: relative;
+  outline: solid rgb(132, 0, 255) 1px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  background-image: url(/public/IconsAndImg/shop/welcomeimg.png);
+}
+.welcome-container {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  outline: solid rgb(184, 9, 9) 1px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcome-title {
+  width: clamp(50px, 80.5vw, 156px);
+  height: 96px;
+  left: 104px;
+  top: 144px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(0.94rem, calc(-1.19rem + 17vw), 2rem);
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+#welcome-note {
+  width: clamp(300px, 80.5vw, 343px);
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(0.5rem, calc(0.06rem + 3.5vw), 0.94rem);
+  line-height: 150%;
+  margin-bottom: 45px;
+  text-align: center;
+  color: #ffffff;
+}
+[class^="welcome-btn-"] {
+  width: clamp(12rem, 50.5vw, 335px);
+  height: 52px;
+  background: #161616;
+  border: 0.5px solid #161616;
+  border-radius: 50px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+.welcome-btn-1 {
+  left: 28px;
+  top: 501px;
+  margin-bottom: 48px;
+}
+.welcome-btn-2 {
+  left: 28px;
+  top: 601px;
+}
+
+[class^="welcome-btn-"]:active {
+  background: white;
+  color: #000;
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+/* CLOTHE PREVIEW SECTION  */
+#Preview-section {
+  display: grid;
+  /* width: 600px; */
+  grid-template-columns: minmax(200px, 600px);
+  /* outline: red solid 5px; */
+  padding: 10px;
+  justify-content: center;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+#preview-slide {
+  position: relative;
+  /* outline: rgb(238, 255, 0) solid 5px; */
+  display: grid;
+}
+#prev-section-btn {
+  position: absolute;
+}
+#previewed-clothe {
+  /* padding: 10px; */
+  width: clamp(200px, 95vw, 600px);
+  height: clamp(100px, 30vh, 200px);
+
+  justify-self: center;
+}
+#previewed-clothe > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#toggler {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  /* outline: red solid 1px; */
+}
+#toggler > img {
+  background-color: #ffffff;
+}
+#preview-title > h2 {
+  margin-top: 3vh;
+  height: 12px;
+  font-weight: 800;
+  font-size: 3vh;
+  line-height: 100%;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #000000;
+}
+#preview-title > div {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+}
+#preview-title > div > h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(15px, 4.7vh, 20px);
+  line-height: 120%;
+  letter-spacing: 0.15px;
+}
+#preview-qty {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 10px;
+}
+#preview-qty > i {
+  align-self: center;
+  border: solid black 2px;
+  border-radius: 50%;
+  padding: 1px;
+  height: 3.4vh;
+  width: 2.4vh;
+}
+#preview-qty > h2 {
+  height: 28px;
+  font-family: "Mulish";
+  font-weight: 400px;
+  font-size: clamp(3vh, 5.41vh, 25px);
+  line-height: 112%;
+
+  color: #000000;
+}
+.description {
+  display: grid;
+
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+}
+.description > p {
+  height: clamp(78px, 20vh, 300px);
+  font-weight: 400;
+  font-size: clamp(10px, 2.29vh, 12px);
+  line-height: 150%;
+  background-color: rgba(208, 208, 208, 1);
+}
+.description > h2 {
+  font-weight: 700;
+  font-size: 3.456vh;
+}
+.size {
+  margin-top: clamp(1px, 2vh, 15px);
+  margin-bottom: clamp(1px, 2vh, 15px);
+}
+.size > h2 {
+  font-weight: 900;
+  font-size: clamp(13px, 3.765vh, 16px);
+}
+.size > div > button {
+  width: 36px;
+  height: 5.423vh;
+  left: 96px;
+  top: 647px;
+  margin-right: 2px;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+#preview-btn {
+  width: clamp(13rem, 100%, 335px);
+  height: clamp(30px, 7vh, 40px);
+  background: #161616;
+  border: 0.5px solid #161616;
+  border-radius: 50px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.02vh;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  /* justify-self: center; */
+}
+#preview-btn:active {
+  /* background: white; */
+  /* color: #000; */
+  box-shadow: inset 5px 5px 10px -3px rgb(255, 255, 255);
 }

@@ -24,19 +24,31 @@ export default function FilterSection() {
       <div className="filteroptions">
         <div>
           <NavLink
-            to="/HomePage/Popular"
+            to="/HomePage/filter/Popular"
             style={activebar}
             className="filterbar"
           >
             Popular
           </NavLink>
-          <NavLink to="/HomePage/Men" style={activebar} className="filterbar">
+          <NavLink
+            to="/HomePage/filter/Men"
+            style={activebar}
+            className="filterbar"
+          >
             Men
           </NavLink>
-          <NavLink to="/HomePage/Women" style={activebar} className="filterbar">
+          <NavLink
+            to="/HomePage/filter/Women"
+            style={activebar}
+            className="filterbar"
+          >
             Women
           </NavLink>
-          <NavLink to="/HomePage/Sale" style={activebar} className="filterbar">
+          <NavLink
+            to="/HomePage/filter/Sale"
+            style={activebar}
+            className="filterbar"
+          >
             Sale
           </NavLink>
         </div>

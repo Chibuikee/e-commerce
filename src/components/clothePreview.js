@@ -1,24 +1,52 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { ClotheContext } from "../ClotheContext";
 
 export default function Clothepreview() {
   const { selected, handleCart, cartitems, handleRemove } =
     useContext(ClotheContext);
-
+  const [slideIndex, setSlideIndex] = useState(0);
   const size = selected.sizes.map((sizesample) => (
     <button key={sizesample.id}>{sizesample.id}</button>
   ));
   const insidecart = cartitems.find((item) => item.name == selected.name);
   const quantity = insidecart ? insidecart : { qty: 0 };
 
+  function showDivs(n) {
+    var x = selected.clotheforms;
+
+    if (n >= x.length) {
+      setSlideIndex(0);
+    } else if (n < 0) {
+      setSlideIndex(x.length - 1); //use the length minus 1 instead of the length only so that you dont get undefined
+    } else {
+      setSlideIndex(n);
+    }
+  }
+
   return (
-    <section>
-      {/* <div className="clotheimgs">{clotheimgPreview}</div> */}
-      <Link to="/HomePage">
-        <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
-      </Link>
-      <div>
+    <section id="Preview-section">
+      <div id="preview-slide">
+        <Link id="prev-section-btn" to="/HomePage">
+          <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+        </Link>
+        {selected.clotheforms && (
+          <img id="previewed-clothe" src={selected.clotheforms[slideIndex]} />
+        )}
+        <div id="toggler">
+          <img
+            onClick={() => showDivs(slideIndex - 1)}
+            src="/IconsAndImg/shopping/goback.png"
+            alt="previousclothe"
+          />
+          <img
+            onClick={() => showDivs(slideIndex + 1)}
+            src="/IconsAndImg/sidebar/forward.png"
+            alt="forward"
+          />
+        </div>
+      </div>
+      <div id="preview-title">
         <h2>The Almighty</h2>
         <div>
           <h2>{selected.name}</h2>
@@ -26,13 +54,10 @@ export default function Clothepreview() {
         </div>
         {/* <div>{staricons}</div> */}
       </div>
-      <div>
-        <div>
-          <i onClick={() => handleCart(selected)}>+</i>
-          <h2>{quantity.qty}</h2>
-          <i onClick={() => handleRemove(selected)}>-</i>
-        </div>
-        <i></i>
+      <div id="preview-qty">
+        <i onClick={() => handleCart(selected)}>+</i>
+        <h2>{quantity.qty}</h2>
+        <i onClick={() => handleRemove(selected)}>&#9472;</i>
       </div>
       <div className="description">
         <h2>Description</h2>
@@ -41,12 +66,18 @@ export default function Clothepreview() {
       </div>
       <div className="size">
         <h2>Size</h2>
-        {size}
+        <div>{size}</div>
       </div>
-      <button onClick={() => handleCart(selected)}>add to cart</button>
+      <button id="preview-btn" onClick={() => handleCart(selected)}>
+        add to cart
+      </button>
     </section>
   );
 }
+
+// slide
+// showDivs(slideIndex + 1)
+
 // useEffect(() => {
 //     setCartitems(
 //       cartitems.map((item) =>

@@ -147,7 +147,7 @@ function App() {
           <Route path="/" element={<WelcomePage />} />
           <Route path="/HomePage" element={<Homepage />}>
             <Route path="Sidebar" element={<Sidebar />} />
-            <Route path=":barId" element={<Filteredbar />} />
+            <Route path="filter/:barId" element={<Filteredbar />} />
           </Route>
           <Route path="/HomePage/:id" element={<Clothepreview />} />
           <Route path="/HomePage/Favourites" element={<Favourites />}>
