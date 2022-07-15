@@ -57,12 +57,14 @@ function App() {
         <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
       </Link>
       <form onSubmit={handleSubmit}>
-        <h1>LOG IN</h1>
+
+        <h3 className="login-text">LOG IN</h3>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">
-            <label>EMAIL</label>
-            <input
+            <label className="email-label">Email</label>
+            <input className="email"
+
               type="text"
               name="email"
               placeholder="Email"
@@ -70,10 +72,12 @@ function App() {
               onChange={handleChange}
             />
           </div>
-          <p>{formErrors.email}</p>
+          <p className="errors">{formErrors.email}</p>
           <div className="field">
-            <label>PASSWORD</label>
-            <input
+
+            <label className="password-label">Password</label>
+            <input className="password"
+
               type="password"
               name="password"
               placeholder="Password"
@@ -81,14 +85,16 @@ function App() {
               onChange={handleChange}
             />
           </div>
-          <p>{formErrors.password}</p>
+          <p className="errors">{formErrors.password}</p>
           <Link to="/HomePage">
-            <button className="sign-button ">LOG IN</button>
+
+            <button className="login-btn">LOG IN</button>
+
           </Link>
         </div>
       </form>
-      <p>
-        Not registered yet?<Link to="/">Create Account</Link>
+      <p className="register-link">
+        Not registered yet? <Link to="/">Create Account</Link>
       </p>
     </div>
   );

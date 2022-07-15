@@ -12,12 +12,13 @@ export default function Navbar() {
   return (
     <section>
       <div className="logoAndmenuIcons-container">
+
         <Link to="/HomePage" className="logo">
           <img src="/IconsAndImg/shop/LOGO 1.png" alt="LOGO" />
         </Link>
         <div className="menuicons-container">
           <Link to="/HomePage/Notifications" className="notification">
-            <img src="/IconsAndImg/shop/notification.png" alt="Notification" />
+            <img className="notifications" src="/IconsAndImg/shop/notification.png" alt="Notification" />
             <span className="badge">3</span>
           </Link>
           <Link to="/Cart" className="notification">
