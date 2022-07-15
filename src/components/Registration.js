@@ -17,7 +17,13 @@ export default function Registration() {
       <pre> {JSON.stringify(userInfo, undefined, 2)} </pre>/*remove this to stop
       displaying form input object */
       <div>
-        <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+        <img
+          src="/IconsAndImg/shop/regImg.png"
+          alt="Background image of registration"
+        />
+        <Link to="/">
+          <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+        </Link>
         <div>
           <h1>Get's started with Bajuku</h1>
           <p>
@@ -27,11 +33,14 @@ export default function Registration() {
             </Link>
           </p>
         </div>
-        <h1>Registration </h1>
-        <img src="" alt="Logo" />
+        <h1>REGISTER </h1>
+        <Link to="/HomePage">
+          <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
+        </Link>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="field">
+
           <label className="name">NAME</label>
           <br/>
           <input className="username"
@@ -43,9 +52,11 @@ export default function Registration() {
         </div>
         <p className="errors" style={{ color: "red" }}>{errors.Username?.message}</p>
         <div className="field">
+
           <label className="email-label">EMAIL</label>
           <br/>
           <input className="email"
+
             type="email"
             name="Email"
             placeholder="name@email.com"
@@ -61,9 +72,11 @@ export default function Registration() {
         </div>
         <p className="errors" style={{ color: "red" }}>{errors.Email?.message}</p>
         <div className="field">
+
           <label className="password-label">PASSWORD</label>
           <br/>
           <input className="password"
+
             type="password"
             name="Password"
             placeholder="Password"

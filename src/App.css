@@ -261,3 +261,58 @@ body {
   font-weight: 700;
   font-size: 15px;
 }
+.logoAndmenuIcons-container {
+  display: flex;
+  justify-content: space-between;
+}
+.menuicons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.filterbar {
+  display: inline-block;
+  padding: 20px 0 20px;
+  vertical-align: middle;
+}
+
+.filterbar {
+  position: relative;
+  display: inline-block;
+  padding: 16px 0;
+  margin: 0 12px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+  color: #000;
+  text-decoration: none;
+} /* just testing out the filterbar edit it to the proper values*/
+.filterbar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: color 0.1s, transform 0.2s ease-out;
+}
+.filterbar:active::before {
+  background-color: #000;
+}
+.filterbar:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+.filterbar:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+  bottom: -10px;
+}

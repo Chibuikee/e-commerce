@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import jsonfiles from "../files.json";
 export default function FilterSection() {
   const [jsonfilesarr] = useState(() => jsonfiles);
@@ -6,24 +7,36 @@ export default function FilterSection() {
     (item) => item.id === "filterAndDisplay"
   );
   const imgArr = filterAndDisplayobj.img;
-  const filteredimgArr = imgArr.filter(
-    (item) => item.name !== "filter"
-  ); /*forEach could be used instead but for code clarity flter and find is used */
+  const filteredimgArr = imgArr.filter((item) => item.name !== "filter");
   const filtericon = imgArr.find((item) => item.name == "filter");
   const viewicons = filteredimgArr.map((item) => (
     <div key={item.name}>
       <img src={item.path} alt={item.name} />
     </div>
   ));
-
+  const activebar = ({ isActive }) => {
+    return {
+      color: isActive ? "red" : "black",
+    };
+  };
   return (
     <section>
       <div className="filter-options">
         <ul className="filter-list">
-          <li>Popular</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>Sale</li>
+          <NavLink
+            to="/HomePage/Popular"
+            style={activebar}
+            className="filterbar"
+          >Popular </NavLink>
+           <NavLink to="/HomePage/Men" style={activebar} className="filterbar">
+            Men
+          </NavLink>
+          <NavLink to="/HomePage/Women" style={activebar} className="filterbar">
+            Women
+          </NavLink>
+          <NavLink to="/HomePage/Sale" style={activebar} className="filterbar">
+            Sale
+          </NavLink>
         </ul>
       </div>
       <hr className="line"></hr>
@@ -31,6 +44,7 @@ export default function FilterSection() {
         <div className="filter-sort">
           <h4 className="filter-text">FILTER & SORT</h4>
           <img className="filter-icon" src={filtericon.path} alt={filtericon.name} />
+
         </div>
         <div className="view-icons">
         {viewicons}

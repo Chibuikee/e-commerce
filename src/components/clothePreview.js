@@ -10,10 +10,8 @@ export default function Clothepreview() {
     <button key={sizesample.id}>{sizesample.id}</button>
   ));
   const insidecart = cartitems.find((item) => item.name == selected.name);
-  const quantity = insidecart
-    ? insidecart
-    : { qty: 0 }; /*check for the item inside the cart first */
-  console.log(ClotheContext);
+  const quantity = insidecart ? insidecart : { qty: 0 };
+
   return (
     <section>
       {/* <div className="clotheimgs">{clotheimgPreview}</div> */}
@@ -30,9 +28,9 @@ export default function Clothepreview() {
       </div>
       <div>
         <div>
-          <i onClick={() => handleCart(selected)}>Add</i>
+          <i onClick={() => handleCart(selected)}>+</i>
           <h2>{quantity.qty}</h2>
-          <i onClick={() => handleRemove(selected)}>remove</i>
+          <i onClick={() => handleRemove(selected)}>-</i>
         </div>
         <i></i>
       </div>

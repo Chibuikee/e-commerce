@@ -96,7 +96,9 @@ export default function Cardmethod() {
             ></input>
           </form>
         </div>
-        <button>Use this card</button>
+        <Link to="/PaymentSuccessful">
+          <button>Use this card</button>
+        </Link>
       </div>
     </div>
   );

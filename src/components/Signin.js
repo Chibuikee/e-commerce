@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function App() {
@@ -18,12 +18,6 @@ function App() {
     setIsSubmit(true);
   };
 
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  }, [formErrors]);
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -50,19 +44,27 @@ function App() {
       ) : (
         <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       )}
-      <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+      <img src="/IconsAndImg/shop/loginImg.png" alt="loginImg" />
+      <Link to="/">
+        <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+      </Link>
       <h1>Welcome Back</h1>
       <p>
         Yay! You're back! Thanks for shopping with us. We have excited deals and
-        promotions going on, grab your pick now!{" "}
+        promotions going on, grab your pick now!
       </p>
+      <Link to="/HomePage">
+        <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
+      </Link>
       <form onSubmit={handleSubmit}>
+
         <h3 className="login-text">LOG IN</h3>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">
             <label className="email-label">Email</label>
             <input className="email"
+
               type="text"
               name="email"
               placeholder="Email"
@@ -72,8 +74,10 @@ function App() {
           </div>
           <p className="errors">{formErrors.email}</p>
           <div className="field">
+
             <label className="password-label">Password</label>
             <input className="password"
+
               type="password"
               name="password"
               placeholder="Password"
@@ -83,7 +87,9 @@ function App() {
           </div>
           <p className="errors">{formErrors.password}</p>
           <Link to="/HomePage">
+
             <button className="login-btn">LOG IN</button>
+
           </Link>
         </div>
       </form>
