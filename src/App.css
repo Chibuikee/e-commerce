@@ -803,6 +803,7 @@ body {
 }
 .cart-item-container {
   display: grid;
+  grid-auto-rows: 100px;
   gap: 10px;
   justify-content: center;
   height: 83vh;
