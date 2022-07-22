@@ -12,47 +12,38 @@ export default function Cardmethod() {
     setcardInfo((prevInfo) => {
       const name = event.target.name;
       const value = event.target.value;
-      return { prevInfo, [name]: value };
+      return { ...prevInfo, [name]: value };
     });
   }
 
   return (
     <div className="Cardmethod">
       <div className="Cardmethod-container">
-        <div style={{ display: "flex" }} className="Cardmethod-path">
+        <div className="Cardmethod-header">
           <Link to="/Cart">
             <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
           </Link>
           <h3>Credit / Debit card</h3>
         </div>
-        <div
-          style={{
-            width: "500px",
-            heigth: "300px",
-            backgroundColor: "black",
-            color: "white",
-          }}
-          className="Cardmethod-card"
-        >
-          <div>
-            <img
-              src="/IconsAndImg/mastercardicon/mastercardlogo-grey.png"
-              style={{ blend: "Passthrough", width: "36px", height: "22px" }}
-              alt="mastercard logo"
-            />
-            <img
-              src="/IconsAndImg/mastercardicon/mastercard-logo.png"
-              style={{ width: "64.71px", heigth: "40px" }}
-              alt="mastercard logo"
-            />
-            <img
-              src="/IconsAndImg/mastercardicon/Tm-icon.svg"
-              style={{ width: "64.71px", heigth: "40px" }}
-              alt="Tm logo"
-            />
-          </div>
-          <h2>{cardInfo.CardNumber}</h2>
-          <div>
+        <div className="Cardmethod-card">
+          <img
+            id="master-card-logo-1"
+            src="/IconsAndImg/mastercardicon/mastercardlogo-grey.png"
+            alt="mastercard logo"
+          />
+          <img
+            id="master-card-logo-2"
+            src="/IconsAndImg/mastercardicon/mastercard-logo.png"
+            alt="mastercard logo"
+          />
+          <img
+            id="master-card-logo-3"
+            src="/IconsAndImg/mastercardicon/Tm-icon.svg"
+            alt="Tm logo"
+          />
+
+          <h2 id="card-number">{cardInfo.CardNumber}</h2>
+          <div id="nameandexp-ctn">
             <ul id="cardholder">
               <li>CARD HOLDER</li>
               <li>{cardInfo.CardHoldersName}</li>
@@ -63,41 +54,53 @@ export default function Cardmethod() {
             </ul>
           </div>
         </div>
-        <h3>Camara goes here</h3>
-        <div className="Cardmethod-inputs">
-          <form>
-            <input
-              type="text"
-              name="CardNumber"
-              placeholder="Input your card number"
-              onChange={handleChange}
-              value={cardInfo.CardNumber}
-            ></input>
-            <input
-              type="text"
-              name="cardExpDate"
-              placeholder="card exp date"
-              onChange={handleChange}
-              value={cardInfo.cardExpDate}
-            ></input>
-            <input
-              type="text"
-              name="cardSecuritycode"
-              placeholder="card security code"
-              onChange={handleChange}
-              value={cardInfo.cardSecuritycode}
-            ></input>
-            <input
-              type="text"
-              name="CardHoldersName"
-              placeholder="Card holder's name"
-              onChange={handleChange}
-              value={cardInfo.CardHoldersName}
-            ></input>
+        <h3 id="camera-position">Camara goes here</h3>
+        <div className="Cardmethod-inputs-section">
+          <form className="Cardmethod-inputs-ctn">
+            <div className="card-info-input-a">
+              <label>Card Number</label>
+              <input
+                type="text"
+                name="CardNumber"
+                placeholder="Input your card number"
+                onChange={handleChange}
+                value={cardInfo.CardNumber}
+              ></input>
+            </div>
+            <div className="card-info-input-b">
+              <label>Expiration Date</label>
+              <input
+                type="text"
+                name="cardExpDate"
+                placeholder="card exp date"
+                onChange={handleChange}
+                value={cardInfo.cardExpDate}
+              ></input>
+            </div>
+            <div className="card-info-input-c">
+              <label>Security Code</label>
+              <input
+                type="text"
+                name="cardSecuritycode"
+                placeholder="card security code"
+                onChange={handleChange}
+                value={cardInfo.cardSecuritycode}
+              ></input>
+            </div>
+            <div className="card-info-input-d">
+              <label>Card Holder</label>
+              <input
+                type="text"
+                name="CardHoldersName"
+                placeholder="Card holder's name"
+                onChange={handleChange}
+                value={cardInfo.CardHoldersName}
+              ></input>
+            </div>
           </form>
         </div>
-        <Link to="/PaymentSuccessful">
-          <button>Use this card</button>
+        <Link id="usecard-btn-ctn" to="/PaymentSuccessful">
+          <button id="usecard-btn">Use this card</button>
         </Link>
       </div>
     </div>

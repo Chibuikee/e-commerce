@@ -14,38 +14,49 @@ export default function Cart() {
   const logo = imgArr.find((item) => item.name === "LOGO");
   return (
     <section>
-      <div>
+      <div id="cart-header">
         <Link to="/HomePage">
           <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
         </Link>
-
-        <div>
-          <h2>Cart</h2>
-          <img src={logo.path} alt="Logo" />
-        </div>
+        <h2>Cart</h2>
+        <img src="/IconsAndImg/shop/LOGO.png" alt="Logo" />
       </div>
       <div>{cartitems.length === 0 && <h2>Cart is empty</h2>}</div>
-      <div>
+      <div className="cart-item-container">
         {cartitems.map((item) => (
-          <div key={item.name}>
-            <img onClick={() => removeItem(item)} src="" alt="delete" />
-            <img src={item.path} />
-            <div>
-              <h2>{item.name}</h2> <h2>{item.price}</h2>
+          <div className="cart-item" key={item.name}>
+            <div className="cart-item-id">
+              <img className="cart-item-img" src={item.path} />
+              <div>
+                <h2>{item.name}</h2> <h2>{item.price}</h2>
+              </div>
             </div>
-            <div>
-              <button onClick={() => handleRemove(item)}>-</button>
-              <h2>{item.qty}</h2>
-              <button onClick={() => handleCart(item)}>+</button>
+
+            <div className="cart-action-ctn">
+              <img
+                className="cart-dlt-btn"
+                onClick={() => removeItem(item)}
+                src="/IconsAndImg/sidebar/delete-btn.png"
+                alt="delete"
+              />
+              <div className="cart-action-btn">
+                <button onClick={() => handleRemove(item)}>
+                  <span>-</span>
+                </button>
+                <h2>{item.qty}</h2>
+                <button onClick={() => handleCart(item)}>
+                  <span>+</span>
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
       {cartitems.length !== 0 && (
-        <div>
+        <div id="checkout-btn">
           <Link to="/Cart/CardMethod">
             <button>
-              Go to checkout<span>{productPrice}</span>
+              Go to checkout<span>RP{productPrice}</span>
             </button>
           </Link>
         </div>

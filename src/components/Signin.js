@@ -38,59 +38,64 @@ function App() {
   };
 
   return (
-    <div className="container">
-      {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success">Signed in successfully</div>
-      ) : (
-        <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-      )}
-      <img src="/IconsAndImg/shop/loginImg.png" alt="loginImg" />
-      <Link to="/">
-        <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
-      </Link>
-      <h1>Welcome Back</h1>
-      <p>
-        Yay! You're back! Thanks for shopping with us. We have excited deals and
-        promotions going on, grab your pick now!
-      </p>
-      <Link to="/HomePage">
-        <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
-      </Link>
-      <form onSubmit={handleSubmit}>
-        <h1>LOG IN</h1>
-        <div className="ui divider"></div>
-        <div className="ui form">
-          <div className="field">
-            <label>EMAIL</label>
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              value={formValues.email}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.email}</p>
-          <div className="field">
-            <label>PASSWORD</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formValues.password}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
-          <Link to="/HomePage">
-            <button className="sign-button ">LOG IN</button>
+    <section id="login-section">
+      <div className="login-container">
+        {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
+          <div className="ui message success">Signed in successfully</div>
+        ) : (
+          <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+        )} */}
+        <div id="login-heading">
+          <Link to="/">
+            <span id="login-back">&#60;</span>
+          </Link>
+          <h1>Welcome Back</h1>
+          <p id="login-note">
+            Yay! You're back! Thanks for shopping with us. We have excited deals
+            and promotions going on, grab your pick now!
+          </p>
+          <Link id="login-logo-ctn" to="/HomePage">
+            <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
           </Link>
         </div>
-      </form>
-      <p>
-        Not registered yet?<Link to="/">Create Account</Link>
-      </p>
-    </div>
+        <form onSubmit={handleSubmit}>
+          <h3 className="login-text">LOG IN</h3>
+          <br className="login-divider"></br>
+          <div className="login-form">
+            <div className="login-field">
+              <label className="login-label-email">Email</label>
+              <input
+                className="login-email"
+                type="text"
+                name="email"
+                placeholder="Email"
+                value={formValues.email}
+                onChange={handleChange}
+              />
+            </div>
+            <p className="login-errors">{formErrors.email}</p>
+            <div className="login-field">
+              <label className="login-label-password">Password</label>
+              <input
+                className="login-password"
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formValues.password}
+                onChange={handleChange}
+              />
+            </div>
+            <p className="login-errors">{formErrors.password}</p>
+            <Link className="login-btn-ctn" to="/HomePage">
+              <button>LOG IN</button>
+            </Link>
+          </div>
+        </form>
+        <p className="login-register-link">
+          Not registered yet? <Link to="/">Create Account</Link>
+        </p>
+      </div>
+    </section>
   );
 }
 

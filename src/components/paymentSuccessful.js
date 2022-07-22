@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 function PaymentSuccessful() {
   return (
     <section>
-      <div>
+      <div id="tansaction-succssful-ctn">
+        <div id="successfulcheck">
+          <span>&#10003;</span>
+        </div>
         <h1>Congrats! Your Order has been placed</h1>
         <p>Your items has been placed and is on it's way to being processed</p>
-        <img src="/IconsAndImg/shop/good.png" />
         <button>TRACK ORDER</button>
         <Link to="/HomePage">
           <button>CONTINUE SHOPPING</button>

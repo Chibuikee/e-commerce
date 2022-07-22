@@ -55,9 +55,13 @@ export default function Clothepreview() {
         {/* <div>{staricons}</div> */}
       </div>
       <div id="preview-qty">
-        <i onClick={() => handleCart(selected)}>+</i>
+        <button onClick={() => handleCart(selected)}>
+          <span>+</span>
+        </button>
         <h2>{quantity.qty}</h2>
-        <i onClick={() => handleRemove(selected)}>&#9472;</i>
+        <button onClick={() => handleRemove(selected)}>
+          <span>-</span>
+        </button>
       </div>
       <div className="description">
         <h2>Description</h2>
@@ -68,8 +72,8 @@ export default function Clothepreview() {
         <h2>Size</h2>
         <div>{size}</div>
       </div>
-      <button id="preview-btn" onClick={() => handleCart(selected)}>
-        add to cart
+      <button className="addcart-btn" onClick={() => handleCart(selected)}>
+        ADD TO CART
       </button>
     </section>
   );

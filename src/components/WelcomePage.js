@@ -4,11 +4,6 @@ function WelcomePage() {
   return (
     <section className="welcome-section">
       <div className="welcome-container">
-        {/* <img
-          id="welcome-img"
-          src="/IconsAndImg/shop/welcomeimg.png"
-          alt="welcome background image"
-        /> */}
         <h1 id="welcome-title">Welcome to bajuku.com</h1>
         <p id="welcome-note">
           Bajuku was born as a medium to showcase anxieties and humanoid

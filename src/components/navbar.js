@@ -12,29 +12,45 @@ export default function Navbar() {
   return (
     <section>
       <div className="logoAndmenuIcons-container">
-        <Link to="/HomePage" className="logo">
-          <img src="/IconsAndImg/shop/LOGO 1.png" alt="LOGO" />
+        <Link className="logo-container" to="/HomePage">
+          <img className="logo" src="/IconsAndImg/shop/LOGO 1.png" alt="LOGO" />
         </Link>
         <div className="menuicons-container">
           <Link to="/HomePage/Notifications" className="notification">
-            <img src="/IconsAndImg/shop/notification.png" alt="Notification" />
+            <img
+              className="notifications"
+              src="/IconsAndImg/shop/notification.png"
+              alt="Notification"
+            />
             <span className="badge">3</span>
           </Link>
           <Link to="/Cart" className="notification">
-            <img src="/IconsAndImg/shop/Cart icon.png" alt="Cart" />
+            <img
+              className="notifications"
+              src="/IconsAndImg/shop/Cart icon.png"
+              alt="Cart"
+            />
             <span className="badge">{cartitems.length}</span>
           </Link>
           <Link to="/HomePage/Favourites" className="notification">
-            <img src={heart.path} alt={heart.name} />
+            <img className="notifications" src={heart.path} alt={heart.name} />
             {favouriteNo.length !== 0 && (
               <span className="badge">{favouriteNo.length}</span>
             )}
           </Link>
           <Link to="/HomePage/Search">
-            <img src="/IconsAndImg/shop/Search Icon.png" alt="Search icon" />
+            <img
+              className="notifications"
+              src="/IconsAndImg/shop/Search Icon.png"
+              alt="Search icon"
+            />
           </Link>
           <Link to="/HomePage/Sidebar">
-            <img src="/IconsAndImg/shop/Menu.png" alt="Menu icon" />
+            <img
+              className="notifications"
+              src="/IconsAndImg/shop/Menu.png"
+              alt="Menu icon"
+            />
           </Link>
         </div>
       </div>
