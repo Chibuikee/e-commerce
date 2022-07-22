@@ -144,7 +144,7 @@ function App() {
         }}
       >
         <Routes>
-          <Route path="/" element={<WelcomePage />} />
+          <Route exact path="/" element={<WelcomePage />} />
           <Route path="/HomePage" element={<Homepage />}>
             <Route path="Sidebar" element={<Sidebar />} />
             <Route path="filter/:barId" element={<Filteredbar />} />
