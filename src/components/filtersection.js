@@ -11,7 +11,7 @@ export default function FilterSection() {
   const filtericon = imgArr.find((item) => item.name == "filter");
   const viewicons = filteredimgArr.map((item) => (
     <div key={item.name}>
-      <img src={item.path} alt={item.name} />
+      <img src={process.env.PUBLIC_URL + item.path} alt={item.name} />
     </div>
   ));
   const activebar = ({ isActive }) => {
@@ -59,7 +59,7 @@ export default function FilterSection() {
           <h4 className="filter-text">FILTER & SORT</h4>
           <img
             className="filter-icon"
-            src={filtericon.path}
+            src={process.env.PUBLIC_URL + filtericon.path}
             alt={filtericon.name}
           />
         </div>

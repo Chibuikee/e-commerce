@@ -16,17 +16,26 @@ export default function Cart() {
     <section>
       <div id="cart-header">
         <Link to="/HomePage">
-          <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+          <img
+            src={process.env.PUBLIC_URL + "/IconsAndImg/shopping/goback.png"}
+            alt="goback"
+          />
         </Link>
         <h2>Cart</h2>
-        <img src="/IconsAndImg/shop/LOGO.png" alt="Logo" />
+        <img
+          src={process.env.PUBLIC_URL + "/IconsAndImg/shop/LOGO.png"}
+          alt="Logo"
+        />
       </div>
       <div>{cartitems.length === 0 && <h2>Cart is empty</h2>}</div>
       <div className="cart-item-container">
         {cartitems.map((item) => (
           <div className="cart-item" key={item.name}>
             <div className="cart-item-id">
-              <img className="cart-item-img" src={item.path} />
+              <img
+                className="cart-item-img"
+                src={process.env.PUBLIC_URL + item.path}
+              />
               <div>
                 <h2>{item.name}</h2> <h2>{item.price}</h2>
               </div>
@@ -36,7 +45,9 @@ export default function Cart() {
               <img
                 className="cart-dlt-btn"
                 onClick={() => removeItem(item)}
-                src="/IconsAndImg/sidebar/delete-btn.png"
+                src={
+                  process.env.PUBLIC_URL + "/IconsAndImg/sidebar/delete-btn.png"
+                }
                 alt="delete"
               />
               <div className="cart-action-btn">

@@ -1196,7 +1196,7 @@ body {
 }
 #card-number {
   font-weight: 700;
-  font-size: 6.47vw;
+  font-size: clamp(15px, 6.47vw, 22px);
   line-height: 150%;
   text-align: center;
   letter-spacing: 0.5px;

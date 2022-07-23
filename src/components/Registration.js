@@ -31,7 +31,10 @@ export default function Registration() {
           </div>
           <h1 id="reg-note2">REGISTER </h1>
           <Link id="reg-logo-ctn" to="/HomePage">
-            <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
+            <img
+              src={process.env.PUBLIC_URL + "/IconsAndImg/shop/LOGO 1.png"}
+              alt="Logo"
+            />
           </Link>
         </div>
         <form id="reg-form" onSubmit={handleSubmit(onSubmit)}>

@@ -55,7 +55,10 @@ function App() {
             and promotions going on, grab your pick now!
           </p>
           <Link id="login-logo-ctn" to="/HomePage">
-            <img src="/IconsAndImg/shop/LOGO 1.png" alt="Logo" />
+            <img
+              src={process.env.PUBLIC_URL + "/IconsAndImg/shop/LOGO 1.png"}
+              alt="Logo"
+            />
           </Link>
         </div>
         <form onSubmit={handleSubmit}>

@@ -9,15 +9,23 @@ function Search() {
       <div>
         <div id="search-header">
           <Link to="/HomePage">
-            <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+            <img
+              src={process.env.PUBLIC_URL + "/IconsAndImg/shopping/goback.png"}
+              alt="goback"
+            />
           </Link>
           <h2>Find Products</h2>
           <Link to="/HomePage">
-            <img src="/IconsAndImg/shop/LOGO.png" alt="Logo" />
+            <img
+              src={process.env.PUBLIC_URL + "/IconsAndImg/shop/LOGO.png"}
+              alt="Logo"
+            />
           </Link>
         </div>
         <div className="search-bar-ctn">
-          <img src="/IconsAndImg/shop/Search Icon.png" />
+          <img
+            src={process.env.PUBLIC_URL + "/IconsAndImg/shop/Search Icon.png"}
+          />
           <input placeholder="Hoodies" onChange={handleSearchStore}></input>
         </div>
         <p id="item-found-message">
@@ -30,7 +38,7 @@ function Search() {
                 <div>
                   <img
                     onClick={() => setSelected(item)}
-                    src={item.path}
+                    src={process.env.PUBLIC_URL + item.path}
                     alt={item.name}
                   />
                 </div>

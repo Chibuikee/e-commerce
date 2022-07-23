@@ -8,8 +8,11 @@ function Favourites() {
   return (
     <section>
       <div id="favourite-header">
-        <Link to="/HomePage/Cart">
-          <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+        <Link to="/HomePage">
+          <img
+            src={process.env.PUBLIC_URL + "/IconsAndImg/shopping/goback.png"}
+            alt="goback"
+          />
         </Link>
         <h3>Favourite</h3>
       </div>
@@ -19,7 +22,7 @@ function Favourites() {
             <Link to={`/HomePage/${item.name}`}>
               <img
                 className="favourite-item-img"
-                src={item.path}
+                src={process.env.PUBLIC_URL + item.path}
                 alt={item.name}
               />
               <span className="fav-item-name">{item.name}</span>
@@ -28,7 +31,7 @@ function Favourites() {
               <h3>Rp{item.price}</h3>
               <img
                 onClick={() => handleCart(item)}
-                src="/IconsAndImg/shop/Arrow.png"
+                src={process.env.PUBLIC_URL + "/IconsAndImg/shop/Arrow.png"}
                 alt="add to basket icon"
               />
             </div>

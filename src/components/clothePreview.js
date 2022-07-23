@@ -28,20 +28,26 @@ export default function Clothepreview() {
     <section id="Preview-section">
       <div id="preview-slide">
         <Link id="prev-section-btn" to="/HomePage">
-          <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+          <img
+            src={process.env.PUBLIC_URL + "/IconsAndImg/shopping/goback.png"}
+            alt="goback"
+          />
         </Link>
         {selected.clotheforms && (
-          <img id="previewed-clothe" src={selected.clotheforms[slideIndex]} />
+          <img
+            id="previewed-clothe"
+            src={`${process.env.PUBLIC_URL}${selected.clotheforms[slideIndex]}`}
+          />
         )}
         <div id="toggler">
           <img
             onClick={() => showDivs(slideIndex - 1)}
-            src="/IconsAndImg/shopping/goback.png"
+            src={process.env.PUBLIC_URL + "/IconsAndImg/shopping/goback.png"}
             alt="previousclothe"
           />
           <img
             onClick={() => showDivs(slideIndex + 1)}
-            src="/IconsAndImg/sidebar/forward.png"
+            src={process.env.PUBLIC_URL + "/IconsAndImg/sidebar/forward.png"}
             alt="forward"
           />
         </div>

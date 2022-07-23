@@ -23,7 +23,7 @@ export default function Homepage() {
           <img
             className="item-img"
             onClick={() => setSelected(item)}
-            src={item.path}
+            src={process.env.PUBLIC_URL + item.path}
             alt="clothe"
           />
         </div>
@@ -42,7 +42,7 @@ export default function Homepage() {
             backgroundColor: `${item.isFavourite ? "red" : "white"}`,
             backgroundClip: "border-box",
           }}
-          src="/IconsAndImg/shop/heart.svg"
+          src={process.env.PUBLIC_URL + "/IconsAndImg/shop/heart.svg"}
           alt="favourite icon"
         />
       </div>

@@ -21,24 +21,35 @@ export default function Cardmethod() {
       <div className="Cardmethod-container">
         <div className="Cardmethod-header">
           <Link to="/Cart">
-            <img src="/IconsAndImg/shopping/goback.png" alt="goback" />
+            <img
+              src={process.env.PUBLIC_URL + "/IconsAndImg/shopping/goback.png"}
+              alt="goback"
+            />
           </Link>
           <h3>Credit / Debit card</h3>
         </div>
         <div className="Cardmethod-card">
           <img
             id="master-card-logo-1"
-            src="/IconsAndImg/mastercardicon/mastercardlogo-grey.png"
+            src={
+              process.env.PUBLIC_URL +
+              "/IconsAndImg/mastercardicon/mastercardlogo-grey.png"
+            }
             alt="mastercard logo"
           />
           <img
             id="master-card-logo-2"
-            src="/IconsAndImg/mastercardicon/mastercard-logo.png"
+            src={
+              process.env.PUBLIC_URL +
+              "/IconsAndImg/mastercardicon/mastercard-logo.png"
+            }
             alt="mastercard logo"
           />
           <img
             id="master-card-logo-3"
-            src="/IconsAndImg/mastercardicon/Tm-icon.svg"
+            src={
+              process.env.PUBLIC_URL + "/IconsAndImg/mastercardicon/Tm-icon.svg"
+            }
             alt="Tm logo"
           />
 
